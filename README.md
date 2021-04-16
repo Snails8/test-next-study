@@ -57,3 +57,8 @@ bootstrap
 ```
 yarn add bootstrap bootstrap-react
 ```
+typeScript導入
+```
+yarn add typescript @types/react @types/react-dom
+ビルド後
+```
