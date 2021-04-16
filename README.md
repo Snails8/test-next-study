@@ -48,3 +48,12 @@ rm -r my-app
 dc down
 dc up
 ```
+
+sass導入
+```
+yarn add @zeit/next-sass node-sass
+```
+bootstrap
+```
+yarn add bootstrap bootstrap-react
+```
