@@ -13,16 +13,16 @@ type Props = {
 
 const IndexPage = ({ name }: Props) => {
     return (
-        <React.Fragment>
+        <>
             <Layout>
                 <h1>Hey Next.js </h1>
                 <p>
-                    <Link>
+                    <Link href="/about">
                         <a>about</a>
                     </Link>
                 </p>
             </Layout>
-        </React.Fragment>
+        </>
     )
 }
 
