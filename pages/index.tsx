@@ -2,7 +2,6 @@ import Layout from '../layouts/Layout'
 import React from "react";
 import Link from 'next/link'
 import {AlertLink, Button} from "bootstrap-react";
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 // function Index(props) {
 //     return <h1>Hello, {props.name}</h1>
