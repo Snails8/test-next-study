@@ -8,11 +8,9 @@ type Props = {
 const Home = ({ name }: Props) => {
     return (
         <>
-            <Layout />
-                <div className="container">
-                    Dark Souls
-                </div>
+            <Layout>
 
+            </Layout>
         </>
     )
 }
