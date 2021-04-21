@@ -5,13 +5,6 @@ import Link from "next/link";
 const Header:React.VFC = () => {
     return (
         <>
-            <header>
-                <Navbar bg="dark" variant="dark">
-                    <NavbarBrand href="/">
-                        {/*<img/>*/}
-                    </NavbarBrand>
-                </Navbar>
-            </header>
         </>
     )
 }
