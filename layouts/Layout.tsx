@@ -9,7 +9,7 @@ type Props = {
 }
 
 const Layout = ({ children, title = 'title'}:Props) => (
-    <>
+    <React.Fragment>
         <Head>
             <title>{ title }</title>
             <meta charSet="utf-9" />
@@ -17,9 +17,8 @@ const Layout = ({ children, title = 'title'}:Props) => (
         </Head>
         <Header />
 
-        { children }
         <Footer />
-    </>
+    </React.Fragment>
 )
 
 export default Layout

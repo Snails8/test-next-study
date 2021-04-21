@@ -1,7 +1,8 @@
 import Layout from '../layouts/Layout'
 import React from "react";
 import Link from 'next/link'
-import {AlertLink} from "bootstrap-react";
+import {AlertLink, Button} from "bootstrap-react";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 // function Index(props) {
 //     return <h1>Hello, {props.name}</h1>
@@ -11,19 +12,20 @@ type Props = {
     name: string
 }
 
-const IndexPage = ({ name }: Props) => {
+const Home = ({ name }: Props) => {
     return (
         <>
-            <Layout>
-                <h1>Hey Next.js </h1>
+            <Layout title="Home | next.js + TypeScript">
+                <h1>Hello Next.js</h1>
                 <p>
                     <Link href="/about">
-                        <a>about</a>
+                        <a>About</a>
                     </Link>
+                    <Button>test</Button>
                 </p>
             </Layout>
         </>
     )
 }
 
-export default Layout
+export default Home
