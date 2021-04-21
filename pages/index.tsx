@@ -14,15 +14,9 @@ type Props = {
 const Home = ({ name }: Props) => {
     return (
         <>
-            <Layout title="Home | next.js + TypeScript">
-                <h1>Hello Next.js</h1>
-                <p>
-                    <Link href="/about">
-                        <a>About</a>
-                    </Link>
-                    <Button>test</Button>
-                </p>
-            </Layout>
+            <div className="container">
+                Dark Souls
+            </div>
         </>
     )
 }
