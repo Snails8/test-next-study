@@ -2,6 +2,7 @@ import React, {ReactNode} from 'react';
 import Header from '../components/Header';
 import Footer from "../components/Footer";
 import Head from "next/head";
+import Form from '../components/Form';
 
 type Props = {
     children?: ReactNode
@@ -18,6 +19,7 @@ const Layout = ({ children, title = 'title'}:Props) => (
 
         <main>
             <div className="container">{children}</div>
+            <Form />
         </main>
 
         <style jsx global>{`
