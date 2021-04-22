@@ -22,6 +22,8 @@ const Layout = ({ children, title = 'title'}:Props) => (
             <div className="container">{children}</div>
             <Form />
             <List />
+
+
         </main>
 
         <style jsx global>{`
