@@ -1,29 +1,22 @@
-import Layout from '../layouts/Layout'
-import React, {useEffect, useState} from "react";
+import React from "react";
+import {awaitExpression, returnStatement} from "@babel/types";
 
-type Props = {
-    name: string
-}
-
-const Home = ({ name }: Props) => {
-
-    const [stars, setStars] = useState(0)
-
-    useEffect(() => {
-        (async () => {
-            const res = await fetch('https://api.github.com/repos/zeit/next.js')
-            const json = await res.json()
-            console.log(json.stargazers_count)
-            setStars(json.stargazers_count)
-        })();
-    })
+const Home = ({ stars }) => {
     return (
-        <>
-            <Layout>
-                <p>User: {name} </p>
-            </Layout>
-        </>
+        <div> Next stars: {stars} </div>
     )
 }
+
+Home.getInitialProps = async ({ req}) => {
+    const res = await fetch('https://api.github.com/repos/zeit/next.js')
+    const json = await res.json()
+    return {stars: json.stargazers_count}
+}
+
+// export async function getServerSideProps() {
+//     const res = await fetch('https://api.github.com/repos/zeit/next.js')
+//     const json = await res.json()
+//     return {stars: json.stargazers_count}
+// }
 
 export default Home
