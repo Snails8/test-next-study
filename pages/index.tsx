@@ -1,11 +1,15 @@
 import React from "react";
 import Link from 'next/link'
 
-const Home = ({ stars }:Props) => {
+type Props = {
+    stars: number
+}
+
+const Home = ({ stars }: Props) => {
     return (
         <div>
             <p>Next stars: {stars}</p>
-            <Link href={"/get-server-side-props"}>
+            <Link href="/get-server-side-props">
                 <a>Go to getServerSideProps</a>
             </Link>
         </div>
@@ -20,21 +24,14 @@ const Home = ({ stars }:Props) => {
 // }
 
 // ビルド時に取得する
-// export async function getStaticProps() {
-//     const res = await fetch('https://api.github.com/repos/zeit/next.js')
-//     const json = await res.json()
-//     return {stars:json.stargazers_count}
-//
-// }
-
-// リクエスト時に取得
-export async function getServerSideProps() {
+export async function getStaticProps() {
     const res = await fetch('https://api.github.com/repos/zeit/next.js')
     const json = await res.json()
+    console.log(json.stargazers_count)
 
     return {
         props: {
-            stars:json.stargazers_count,
+            stars: json.stargazers_count,
         },
     }
 }
