@@ -9,7 +9,7 @@ const Index = ({ stars }: Props) => {
     return (
         <div>
             <p>Next Stars X : {stars}</p>
-            <Link href="/">
+            <Link href="/get-static-props">
                 <a>Go to Home</a>
             </Link>
         </div>
